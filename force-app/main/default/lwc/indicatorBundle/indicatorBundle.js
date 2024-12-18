@@ -89,8 +89,8 @@ export default class IndicatorBundle extends LightningElement {
                     imageName: 'custom:setup'
                 };
             } else {
-                this.targetMessage = 'This Indicator Bundle displays indicators based on the record id (' + data.fields[this.mappedField].value + ') in the mapped field \"' + this.mappedField + '\" from the ' + data.apiName + ' object.';
                 this.targetIdValue = getFieldValue(data, this.targetIdField);
+                this.targetMessage = 'This Indicator Bundle displays indicators based on the record id (' + this.targetIdValue + ') in the mapped field \"' + this.mappedField + '\" from the ' + this.objectApiName + ' object.';
                 this.showIllustration=false;
                 this.illustration = {};
             }
